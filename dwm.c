@@ -1552,6 +1552,7 @@ void
 setup(void)
 {
 	XSetWindowAttributes wa;
+	Arg a = SHCMD("dwm-autolaunch");
 
 	/* clean up any zombies immediately */
 	sigchld(0);
@@ -1606,6 +1607,7 @@ setup(void)
 	XSelectInput(dpy, root, wa.event_mask);
 	grabkeys();
 	focus(NULL);
+	spawn(&a);
 }
 
 void
