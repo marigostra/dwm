@@ -58,11 +58,15 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *emacspeakcmd[]  = { "emacspeak", NULL };
 static const char *luwraincmd[]  = { "luwrain", NULL };
+static const char *officecmd[]  = { "libreoffice", NULL };
+static const char *browsercmd[]  = { "chromium-browser", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = emacspeakcmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = luwraincmd } },
+		{ MODKEY|ShiftMask,             XK_o,      spawn,          {.v = officecmd } },
+			{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = browsercmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
        	{ MODKEY,                       XK_l,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
