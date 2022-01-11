@@ -58,25 +58,21 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *emacspeakcmd[]  = { "emacspeak", NULL };
 static const char *luwraincmd[]  = { "luwrain", NULL };
-static const char *officecmd[]  = { "libreoffice", NULL };
-static const char *browsercmd[]  = { "chromium-browser", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = emacspeakcmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = luwraincmd } },
-		{ MODKEY|ShiftMask,             XK_o,      spawn,          {.v = officecmd } },
-			{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = browsercmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-       	{ MODKEY,                       XK_l,      togglebar,      {0} },
-	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+       	{ MODKEY | ControlMask,                       XK_f,      togglebar,      {0} },
+	{ MODKEY | ControlMask,                       XK_g,      focusstack,     {.i = +1 } },
+	{ MODKEY | ControlMask,                       XK_h,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
-	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_a,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,                       XK_space,  setlayout,      {0} },
+	{ MODKEY | ControlMask,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY | ControlMask,                       XK_a,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY | ControlMask,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY | ControlMask,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
