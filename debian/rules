@@ -14,4 +14,5 @@ build:
 	make
 
 override_dh_auto_install:
-	make PREFIX=debian/mbrola-suite/usr install
+	mkdir -p debian/dwm-luwrain/usr/bin
+	install -m 755 dwm debian/dwm-luwrain/usr/bin/dwm-luwrain
