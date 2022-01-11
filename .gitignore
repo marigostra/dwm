@@ -1,0 +1,5 @@
+dwm
+*.o
+debian/dwm-luwrain*
+debian/debhelper-build-stamp
+
