@@ -1,0 +1,13 @@
+Source: dwm-luwrain
+Section: unknown
+Priority: optional
+Maintainer: Michael Pozhidaev <msp@luwrain.org>
+Build-Depends: debhelper (>= 8.0.0), libx11-dev, libxft-dev, libxinerama-dev
+Standards-Version: 3.9.4
+Homepage: https://luwrain.org/?lang=en
+
+Package: dwm-luwrain
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: A lightweight window manager prepared for use with the platform for the blind
+  A lightweight window manager prepared for use with the platform for the blind
